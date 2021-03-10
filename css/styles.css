@@ -306,7 +306,7 @@ input:focus {
   fill: var(--blue-text);
 }
 
-input:focus .form-field-icon {
+input:focus + .form-field-icon {
   fill: var(--blue-text);
 }
 
@@ -393,6 +393,11 @@ input:focus .form-field-icon {
   background-image: url(../images/vector/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
+  box-shadow: none;
+}
+
+.checkbox:focus + .checkbox-icon {
+  box-shadow: 0 0 0 1px black;
 }
 
 .label a {
