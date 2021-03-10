@@ -55,45 +55,67 @@
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
                         <button class="close" data-modal-close>
-                            <img src="./images/vector/close.svg" alt="Кнопка закрыть">
+                            <svg class="close-btn" width=18px height=18px>
+                                <use href="./images/icons.svg#close">
+                                </use>
+                            </svg>
                         </button>                
                        <h2>
                         Оставьте свои данные, мы вам перезвоним
                        </h2>
-                    <form class="hero-form js-speaker-form">
+                    <form class="hero-form">
                     
                         <div class="form-field">
                             <label for="user-name">Имя</label>
                             <input type="text" name="user-name" id="user-name">
+                            <svg class="form-field-icon" width=18px height=18px>
+                                <use href="./images/icons.svg#person-black">
+                                </use>
+                            </svg>
                         </div>
                     
                     
                         <div class="form-field">
                             <label for="tel">Телефон</label>
                             <input type="tel" name="tel" id="tel" placeholder="">
+                            <svg class="form-field-icon" width=18px height=18px>
+                                <use href="./images/icons.svg#phone-black">
+                                </use>
+                            </svg>
+                            
                         </div>
                     
                         <div class="form-field">
                             <label for="mail">Почта</label>
                             <input type="email" name="mail" id="mail" placeholder="">
+                            <svg class="form-field-icon" width=18px height=18px>
+                                <use href="./images/icons.svg#email-black">
+                                </use>
+                            </svg>
                         </div>
 
-                        <div class="form-field">
+                        <div class="form-field ffcomment">
                             <label for="comment">Комментарий</label>
-                            <textarea name="" id="comment" cols="30" rows="10"> </textarea>
+                            <textarea
+                            class="comment-text" 
+                            name="comment" 
+                            id="comment"
+                            placeholder="Введите текст"
+                        ></textarea>
                         </div>
-                    
-                        <p>
-                            Соглашаюсь с рассылкой и принимаю Условия договора
-                        </p>     
-                        
+
+                        <div class="confirm">
+                            <label class="label">
+                                <input class="checkbox" type="checkbox" name="confirm">
+                                <span class="checkbox-icon"></span>
+                                Соглашаюсь с рассылкой и принимаю
+                                <a href="">Условия договора</a>
+                            </label>
+                        </div>
+
                         <button type="submit">Отправить
-                            
-                        </button>
-                    
+                        </button>                   
                     </form>
-
-
                     </div>
                 </div>
         </section>
@@ -146,11 +168,10 @@
                 <h2>Наша команда</h2>
                 <ul class="command-persons">
                     <li class="person">
-                        <article class="card">
-                            <div class="card-thumb">
-                                <img src="./images/dem.jpg" width="270px" alt="Игорь Демьяненко">
-                            </div>
-                        </article>
+                       <div class="card-thumb">
+                            <img src="./images/dem.jpg" width="270" alt="Игорь Демьяненко">
+                        </div>
+                       
                         <h3>Игорь Демьяненко</h3>
                         <p>Product Designer</p>
                         <ul class="social-icons-list">
@@ -193,11 +214,9 @@
                     </li>
                     
                     <li class="person">                        
-                        <article class="card">
-                            <div class="card-thumb">
-                                <img src="./images/rep.jpg" width="270px" alt="Ольга Репина">
-                            </div>
-                        </article>                        
+                        <div class="card-thumb">
+                                <img src="./images/rep.jpg" width="270" alt="Ольга Репина">
+                        </div>                        
                         <h3>Ольга Репина</h3>
                         <p>Frontend Developer</p>
                         <ul class="social-icons-list">
@@ -240,11 +259,9 @@
                         </li>
                    
                     <li class="person">                        
-                        <article class="card">
-                            <div class="card-thumb">
-                                <img src="./images/tar.jpg" width="270px" alt="Николай Тарасов">
-                            </div>
-                        </article>
+                        <div class="card-thumb">
+                                <img src="./images/tar.jpg" width="270" alt="Николай Тарасов">
+                        </div>                        
                         <h3>Николай Тарасов</h3>
                         <p>Marketing</p>
                         <ul class="social-icons-list">
@@ -286,11 +303,9 @@
                         </ul>
                         </li>
                     <li class="person">
-                        <article class="card">
-                            <div class="card-thumb">
-                                <img src="./images/yerm.jpg" width="270px" alt="Михаил Ермаков">
-                            </div>
-                        </article>
+                        <div class="card-thumb">
+                                <img src="./images/yerm.jpg" width="270" alt="Михаил Ермаков">
+                        </div>
                         <h3>Михаил Ермаков</h3>
                         <p>UI Designer</p>
                 <ul class="social-icons-list">
@@ -460,7 +475,7 @@
                 <li>
                     <h3>Подпишитесь на рассылку</h3>
                     <div class="subscription">
-                        <input type="email" name="mail" id="mail" placeholder="E-mail">
+                        <input type="email" name="mail"  placeholder="E-mail">
                         <button type="submit">Подписаться
                             <svg class="subscr-icon" width=24px height=24px>
                                 <use href="./images/icons.svg#icon-send">
